@@ -4,11 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
+import Category from './Category';
 
 export const Carousel = () => {
     const { data, fetchAllProducts } = getData();
 
-    console.log(data);
+    // console.log(data);
 
     useEffect(() => {
         fetchAllProducts();
@@ -22,7 +23,7 @@ export const Carousel = () => {
                 <AiOutlineArrowLeft className='arrows' style={{
                     ...style, display: "block", borderRadius: "50px",
                     background: "#f53347", color: "white", position: "absolute", padding: "2px", left: "50px"
-                }} onMouseOver="this.style.backgroundColor='#555'" />
+                }} />
             </div>
         )
     }
@@ -78,6 +79,7 @@ export const Carousel = () => {
                     }
 
                 </Slider>
+                <Category />
             </div>
         </>
     )
