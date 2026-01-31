@@ -45,9 +45,9 @@ export const Navbar = ({ location, getLocation, openDropdown, setOpenDropdown })
                         <IoCartOutline className='h-7 w-7' />
                         <span className='bg-red-500 px-2 rounded-full absolute -top-3 -right-3 text-white'>0</span>
                     </Link>
-                    <div className="bg-red-500 py-2 px-7 cursor-pointer rounded-md text-white hover:bg-red-400">
+                    <div >
                         <SignedOut>
-                            <SignInButton className="cursor-pointer" />
+                            <SignInButton className="bg-red-500 py-2 px-7 cursor-pointer rounded-md text-white hover:bg-red-400 cursor-pointer" />
                         </SignedOut>
                         <SignedIn>
                             <UserButton />

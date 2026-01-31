@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
+import Footer from './components/Footer'
 import { Navbar } from "./components/Navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -51,6 +52,7 @@ function App() {
 
         {/* 404 */}
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
