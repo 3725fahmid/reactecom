@@ -1,19 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { getData } from '../contex/DataContext'
 
 function Category() {
-    const { data, fetchAllProducts } = getData();
-
-    useEffect(() => {
-        fetchAllProducts();
-    }, []);
-
-    const getUniqueCategory = (data, property) => {
-        return [...new Set(data?.map(item => item[property]))];
-    };
-
-    const categoryOnlyData = getUniqueCategory(data, "category");
-    // console.log(categoryOnlyData);
+    const { categoryOnlyData } = getData();
 
     return (
         <div className='bg-[#101829]'>

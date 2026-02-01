@@ -2,7 +2,7 @@ import React from 'react'
 import { IoCartOutline } from 'react-icons/io5';
 
 function ProductCard({ product }) {
-    console.log(product);
+    // console.log(product);
 
     return (
         <div className="border border-gray-100 rounded-2xl cursor-pointer 
