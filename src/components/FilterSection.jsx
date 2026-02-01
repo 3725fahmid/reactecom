@@ -34,6 +34,19 @@ export const FilterSection = () => {
                     })
                 }
             </select>
+
+            {/* Price range  */}
+            <h1 className='mt-5 font-semibold text-xl mb-3'>Price Range</h1>
+            <div className="flex flex-col gap-2">
+                <label htmlFor="">Price Range: $0 - $5000</label>
+                <input type="range" name="" id="" />
+            </div>
+            <button className="mt-3 bg-red-500 px-2 py-2 text-md rounded-md 
+                            text-white w-full flex gap-2 items-center 
+                            justify-center font-semibold cursor-pointer hover:bg-red-700">
+                Reset Filter
+            </button>
+
         </div>
     )
 } 

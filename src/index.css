@@ -13,3 +13,11 @@
     width: 40px;
     margin: 1px;
 }
+
+/* input colors  */
+input {
+    background-color: #fff;
+    accent-color: red;
+    border: 1px solid #ccc;
+    color: #333;
+}
