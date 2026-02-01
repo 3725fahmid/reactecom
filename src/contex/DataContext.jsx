@@ -9,9 +9,9 @@ export const DataProvider = ({ children }) => {
     // fetching all product from api 
     const fetchAllProducts = async () => {
         try {
-            const response = await axios.get('https://fakestoreapi.com/products')
-            // console.log(response.data);
-            const productData = response.data;
+            const response = await axios.get('https://fakestoreapiserver.reactbd.org/api/products')
+            console.log(response.data.data);
+            const productData = response.data.data;
             setData(productData);
         } catch (error) {
             console.log(error);
@@ -20,13 +20,14 @@ export const DataProvider = ({ children }) => {
     }
 
     const getUniqueCategory = (data, property) => {
-        return [...new Set(data?.map(item => item[property]))];
+        return ["All", ...new Set(data?.map(item => item[property]))];
     };
 
     const categoryOnlyData = getUniqueCategory(data, "category");
+    const brandOnlyData = getUniqueCategory(data, "brand");
     // console.log(categoryOnlyData);
 
-    return <DataContext.Provider value={{ data, setData, fetchAllProducts, categoryOnlyData }}>
+    return <DataContext.Provider value={{ data, setData, fetchAllProducts, categoryOnlyData, brandOnlyData }}>
         {children}
     </DataContext.Provider>
 }
