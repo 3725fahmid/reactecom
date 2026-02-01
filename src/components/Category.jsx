@@ -13,7 +13,7 @@ function Category() {
     };
 
     const categoryOnlyData = getUniqueCategory(data, "category");
-    console.log(categoryOnlyData);
+    // console.log(categoryOnlyData);
 
     return (
         <div className='bg-[#101829]'>
