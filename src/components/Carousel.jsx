@@ -56,7 +56,7 @@ export const Carousel = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="">
                 <Slider {...settings}>
                     {
                         data?.slice(0, 7)?.map((item, index) => {
