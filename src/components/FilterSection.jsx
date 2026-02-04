@@ -2,7 +2,7 @@ import React from 'react'
 import { getData } from '../contex/DataContext'
 
 
-export const FilterSection = ({ search, setSearch, category, brand, priceRange, setPriceRange, handleBrandChange, handleCategoryChange }) => {
+export const FilterSection = ({ search, setSearch, category, brand, priceRange, setPriceRange, handleBrandChange, handleCategoryChange, resetFilter }) => {
     const { categoryOnlyData, brandOnlyData } = getData();
 
     // console.log(categoryOnlyData);
@@ -56,7 +56,9 @@ export const FilterSection = ({ search, setSearch, category, brand, priceRange, 
             </div>
             <button className="mt-3 bg-red-500 px-2 py-2 text-md rounded-md 
                             text-white w-full flex gap-2 items-center 
-                            justify-center font-semibold cursor-pointer hover:bg-red-700">
+                            justify-center font-semibold cursor-pointer hover:bg-red-700"
+                onClick={resetFilter}
+            >
                 Reset Filter
             </button>
 
