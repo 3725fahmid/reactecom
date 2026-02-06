@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import { Navbar } from "./components/Navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import SingleProduct from "./pages/SingleProduct";
 
 function App() {
   const [location, setLocation] = useState();
@@ -46,6 +47,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<SingleProduct />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
         {/* </Route> */}

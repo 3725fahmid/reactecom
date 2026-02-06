@@ -1,7 +1,9 @@
 import React from 'react'
 import { IoCartOutline } from 'react-icons/io5';
+import { useNavigate } from 'react-router-dom';
 
 function ProductCard({ product }) {
+    const navigate = useNavigate();
     // console.log(product);
 
     return (
@@ -11,6 +13,7 @@ function ProductCard({ product }) {
 
             {/* Image */}
             <img
+                onClick={() => navigate(`/products/${product._id}`)}
                 src={product.image}
                 alt={product.title}
                 className="bg-gray-100 aspect-square object-contain rounded-xl p-2"
