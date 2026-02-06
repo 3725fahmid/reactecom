@@ -4,6 +4,8 @@ import { FilterSection } from '../components/FilterSection';
 import Loading from "../assets/Loading4.webm"
 import ProductCard from '../components/ProductCard';
 import Pagination from '../components/Pagination';
+import notfound from '../assets/notfound.json'
+import Lottie from 'lottie-react';
 
 function Products() {
 
@@ -69,8 +71,8 @@ function Products() {
                                             <Pagination pageHandler={pageHandler} page={page} dynamicPage={dynamicPage} />
                                         </div>
                                     ) : (
-                                        <div className="c">
-
+                                        <div className="flex justify-center items-center md:h-[600px] md:w-[900px] mt-10">
+                                            <Lottie animationData={notfound} classID='w-[500px]]' />
                                         </div>
                                     )
                                 }
