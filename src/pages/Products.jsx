@@ -22,11 +22,13 @@ function Products() {
 
     const handleCategoryChange = (e) => {
         setCategory(e.target.value);
+        setPage(1);
         // console.log(category);
 
     };
     const handleBrandChange = (e) => {
         setBrand(e.target.value);
+        setPage(1);
     };
 
     const pageHandler = (selectedPage) => {
