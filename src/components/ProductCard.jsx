@@ -1,9 +1,11 @@
 import React from 'react'
 import { IoCartOutline } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
+import { useCart } from '../contex/CartContext';
 
 function ProductCard({ product }) {
     const navigate = useNavigate();
+    const { addToCart } = useCart();
     // console.log(product);
 
     return (
@@ -30,7 +32,9 @@ function ProductCard({ product }) {
             </p>
 
             {/* Button always at bottom */}
-            <button className="mt-3 bg-red-500 px-3 py-2 text-lg rounded-md 
+            <button
+                onClick={() => addToCart(product)}
+                className="mt-3 bg-red-500 px-3 py-2 text-lg rounded-md 
                             text-white w-full flex gap-2 items-center 
                             justify-center font-semibold cursor-pointer hover:bg-red-700">
                 <IoCartOutline className="w-6 h-6" />

@@ -43,7 +43,7 @@ function SingleProduct() {
                         {/* product details */}
                         <div className='flex flex-col gap-6'>
                             <h1 className='md:text-3xl text-xl font-bold text-gray-800'>{productDetails.title}</h1>
-                            <div className='text-gray-700'>{productDetails.brand?.toUpperCase()} /{productDetails.category?.toUpperCase()} /{productDetails.model}</div>
+                            <div className='text-gray-700'>{productDetails.brand?.toUpperCase()} /{productDetails.category?.toUpperCase()} /{productDetails.type}</div>
                             <p className='text-xl text-red-500 font-bold'>${productDetails.price} <span className='line-through text-gray-700'>${OriginalPrice}</span> <span className='bg-red-500 text-white px-4 py-2 rounded-full'>{productDetails.discountedPrice}% discount</span></p>
                             <p className='text-gray-600'>{productDetails.description}</p>
 
@@ -54,7 +54,7 @@ function SingleProduct() {
                             </div>
 
                             <div className='flex gap-4 mt-4'>
-                                <button onClick={() => addToCart(productDetails)} className='px-6 flex gap-2 py-2 text-lg bg-red-500 text-white rounded-md'><IoCartOutline className='w-6 h-6' /> Add to Cart</button>
+                                <button onClick={() => addToCart(productDetails)} className='px-6 flex gap-2 py-2 text-lg bg-red-500 text-white rounded-md cursor-pointer'><IoCartOutline className='w-6 h-6' /> Add to Cart</button>
                             </div>
                         </div>
                     </div>
