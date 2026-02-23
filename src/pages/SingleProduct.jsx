@@ -14,7 +14,7 @@ function SingleProduct() {
         try {
             const res = await axios.get(`https://fakestoreapiserver.reactbd.org/api/products/${params.id}`);
             const product = res.data;
-            console.log(product);
+            // console.log(product);
             setProductDetails(product);
 
 
