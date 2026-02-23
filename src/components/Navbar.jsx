@@ -6,8 +6,11 @@ import { IoCartOutline } from 'react-icons/io5'
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react'
 import { useState } from 'react'
 import { CgClose } from 'react-icons/cg'
+import { useCart } from '../contex/CartContext'
 
 export const Navbar = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
+
+    const { cartItem } = useCart();
 
     const toggleDropDown = () => {
         setOpenDropdown(!openDropdown);
@@ -43,7 +46,7 @@ export const Navbar = ({ location, getLocation, openDropdown, setOpenDropdown })
                     </ul>
                     <Link to={'/cart'} className='relative'>
                         <IoCartOutline className='h-7 w-7' />
-                        <span className='bg-red-500 px-2 rounded-full absolute -top-3 -right-3 text-white'>0</span>
+                        <span className='bg-red-500 px-2 rounded-full absolute -top-3 -right-3 text-white'>{cartItem.length}</span>
                     </Link>
                     <div >
                         <SignedOut>
